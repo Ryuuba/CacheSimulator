@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "exception": "cpp",
+        "type_traits": "cpp"
+    },
+  // Controla el tamaño de fuente en píxeles.
+  "editor.fontSize": 20
+}
