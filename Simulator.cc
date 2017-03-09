@@ -10,7 +10,7 @@ rng(seed)
     if (ifs.is_open()) {
         ifs >> capacity
             >> slotSize
-            >> policy_id
+            >> policy_id //An integer number to identify a policy (LRU = 1)
             >> instructionNumber
             >> branchProbability
             >> ramSize
