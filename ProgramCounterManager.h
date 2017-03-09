@@ -1,18 +1,29 @@
+#ifndef PROGRAM_COUNTER_MANAGER_H
+#define PROGRAM_COUNTER_MANAGER_H
+
 #include <fstream>
 #include <random>
+#include <iostream>
+#include <cstdint>
 
 class ProgramCounterManager {
 protected:
-    unsigned instructionNumber;
-    unsigned pc; //program counter
     double branchProbability;
+    unsigned instructionNumber; //Number of instruction to be processed
+    unsigned pc; //program counter
     unsigned ramSize;   //RAM size (words)
-    std::bernoulli_distribution* bernoulliDistribution;
-    std::uniform_int_distribution<unsigned>* discreteRandomDistribution;
+    std::uniform_int_distribution<unsigned>* offsetDistribution;
+    std::bernoulli_distribution* branchDistribution;
 public:
     ProgramCounterManager();
     ProgramCounterManager(const char*);
+    ProgramCounterManager(const ProgramCounterManager&);
+    ProgramCounterManager(unsigned, double, unsigned);
     virtual ~ProgramCounterManager();
     virtual unsigned getInstructionNumber();
-    virtual unsigned getPC(std::minstd_rand0&);
+    virtual unsigned getPC(std::ranlux48&);
+    virtual void initializePC(std::ranlux48&);
+    virtual void initializePC(unsigned);
 };
+
+#endif

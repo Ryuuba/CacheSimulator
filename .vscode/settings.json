@@ -4,8 +4,26 @@
         "cstdio": "cpp",
         "cstdlib": "cpp",
         "exception": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "cmath": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "cctype": "cpp",
+        "cfenv": "cpp",
+        "cinttypes": "cpp",
+        "clocale": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "new": "cpp",
+        "typeinfo": "cpp"
     },
   // Controla el tamaño de fuente en píxeles.
-  "editor.fontSize": 20
+  "editor.fontSize": 14
+  
+
 }

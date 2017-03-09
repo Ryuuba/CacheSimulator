@@ -1,17 +1,10 @@
-#include "ProgramCounterManager.h"
-#include <iostream>
+#include "Simulator.h"
 #include <cstdlib>
 
-using std::cout;
-using std::endl;
-
 int main(int argc, char* argv[]) {
-    unsigned seed = std::atoi(argv[1]);
-    cout << seed << endl;
-    std::minstd_rand0 generator(seed);
-    ProgramCounterManager pcManager;
-    do
-        cout << "Program counter: " << pcManager.getPC(generator) << endl;
-    while (pcManager.getInstructionNumber());
+    unsigned seed = std::atoi(argv[2]);
+    Simulator sim(argv[1], seed);
+    sim.run();
+    sim.computeStatistics();
     return 0;
 }
