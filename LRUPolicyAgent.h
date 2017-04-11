@@ -15,7 +15,7 @@ private:
     virtual void print();
     virtual unsigned replacementPolicy(unsigned slot = 0);
 public:
-    LRUPolicyAgent(Policy, unsigned);
+    LRUPolicyAgent(unsigned);
     ~LRUPolicyAgent(){}
 };
 

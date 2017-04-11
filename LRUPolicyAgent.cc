@@ -1,10 +1,9 @@
 #include "LRUPolicyAgent.h"
 
-LRUPolicyAgent::LRUPolicyAgent(Policy policy, unsigned capacity) :
+LRUPolicyAgent::LRUPolicyAgent(unsigned capacity) :
 neatLittleMatrix(capacity, 0)
 {
     this->capacity = capacity;
-    this->policy = policy;
 }
 
 

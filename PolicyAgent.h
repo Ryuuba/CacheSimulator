@@ -13,7 +13,6 @@ enum class Policy : uint8_t {LRU=1, LFU, RANDOM, FIFO};
 
 class PolicyAgent {
 protected:
-    Policy policy;
     unsigned capacity;
 public:
     PolicyAgent(){}

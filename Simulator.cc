@@ -10,14 +10,14 @@ rng(seed)
     if (ifs.is_open()) {
         ifs >> capacity
             >> slotSize
-            >> policy_id //An integer number to identify a policy (LRU = 1)
+            >> policy_id //(LRU = 1, LFU = 2, FIFO = 3, RANDOM = 4)
             >> instructionNumber
             >> branchProbability
             >> ramSize
             >> hitTime
             >> missTime;
         Policy policy = static_cast<Policy>(policy_id);
-        cache = new AssociativeCache(capacity, slotSize, policy);
+        cache = new AssociativeCache(capacity, slotSize, policy, &rng);
         pcManager = new ProgramCounterManager(instructionNumber, branchProbability, ramSize);
         hit = 0;
         miss = 0;

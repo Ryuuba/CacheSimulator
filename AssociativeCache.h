@@ -20,11 +20,13 @@ private:
     PolicyAgent* agent;
 public:
     //log2_capacity, log2_slotsize, replacement policy
-    AssociativeCache(unsigned, unsigned, Policy);
+    AssociativeCache(unsigned, unsigned, Policy, std::ranlux48*);
     //Deletes the agent if it exists
     ~AssociativeCache();
     //Fetches a word in the cache
     bool fetchWord(unsigned);
+    //Prints the labels in the cache
+    void print();
 };
 
 #endif
