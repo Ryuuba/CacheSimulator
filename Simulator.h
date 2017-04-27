@@ -11,7 +11,7 @@ class Simulator {
 private:
     Cache* cache;
     ProgramCounterManager* pcManager;
-    unsigned hit, miss, pc, seed;
+    unsigned hit, miss, pc;
     double hitTime, missTime;
     std::ranlux48 rng;
 public:

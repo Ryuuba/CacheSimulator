@@ -1,7 +1,6 @@
 #include "Simulator.h"
 
 Simulator::Simulator(const char* filename, unsigned seed) :
-seed(seed),
 rng(seed)
 {
     std::ifstream ifs(filename);

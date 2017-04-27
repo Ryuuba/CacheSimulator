@@ -2,8 +2,22 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "g++",
+    "windows": {
+        "command": "g++"
+    },
+    "osx": {
+        "command": "clang++"
+    },
     "isShellCommand": true,
-    "args": ["*.cc","-osimcache", "-std=c++14", "-g", "-Wall", "-I."],
+    "args": ["main.cc",
+             "LRUPolicyAgent.cc",
+             "ProgramCounterManager.cc",
+             "Simulator.cc",
+             "AssociativeCache.cc",
+             "-osimcache", 
+             "-std=c++14", 
+             "-g", 
+             "-Wall", 
+             "-I."],
     "showOutput": "always"
 }
